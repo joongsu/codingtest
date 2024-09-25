@@ -15,6 +15,7 @@ void dfs(int x){
         int y = graph[x][i];
         if(!visit[y]) dfs(y);
     }
+
 }
 
 void bfs(int start){
@@ -28,14 +29,12 @@ void bfs(int start){
         q.pop();
         cout << x << ' ';
 
-        for(int i = 0 ; i< graph[x].size() ; i++){  
-            int y = graph[x][i];
-            if(!visit[y]){
-                q.push(y);
-                visit[y] = true;
+        for(auto i : graph[x]){
+            if(!visit[i]){
+                q.push(i);
+                visit[i] = true;
             }
         }
-
     }
 }
 
@@ -50,7 +49,7 @@ int main(){
         graph[a].push_back(b);
         graph[b].push_back(a);
     }
-    for(int i = 0 ; i <n ; i++){
+    for(int i = 1 ; i <=n ; i++){
         sort(graph[i].begin(),graph[i].end());
     }
     
