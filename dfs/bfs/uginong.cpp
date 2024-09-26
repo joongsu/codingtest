@@ -37,7 +37,6 @@ int main(){
             cin >> x >> y;
             graph[y][x] = 1;
         }
-
         for(int i = 0 ; i < n ; i++){
             for(int j = 0 ; j < m ; j++){
                 if(graph[i][j] == 1 && visit[i][j] == 0){
