@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> // 2667 - 백준 단지붙이기
 #include <vector>
 #include <algorithm>
 
