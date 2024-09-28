@@ -43,8 +43,6 @@ int main(){
                 graph[i][j] = a;
             }
         }
-        // 0 1
-        // 1 0
 
         for(int k = 0 ; k < h ; k++){
             for(int l = 0; l < w ; l++){
