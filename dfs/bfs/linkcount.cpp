@@ -2,15 +2,15 @@
 #include <vector>
 using namespace std;
 vector<int> graph[1001];
-int visit[1001];
-int count = 0;
+int visited[1001];
+int counted = 0;
 
 void dfs(int x){
-    if(visit[x] == 1)return;
-    visit[x] = 1;
+    if(visited[x] == 1)return;
+    visited[x] = 1;
 
     for(auto &x : graph[x] ){
-        if(visit[x] != 1)
+        if(visited[x] != 1)
             dfs(x);
     }
 }
@@ -26,10 +26,10 @@ int main(){
         graph[b].push_back(a);
     }
     for(int i = 1 ; i<= n ; i++){
-        if(visit[i] == 0){
+        if(visited[i] == 0){
             dfs(i);
-            count++;
+            counted++;
         }
     }
-    cout << count;
+    cout << counted;
 }
