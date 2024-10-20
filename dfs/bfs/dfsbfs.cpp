@@ -5,15 +5,15 @@
 using namespace std;
 
 vector<int> graph[1001];
-bool visit[1001];
+bool visited[1001];
 
 void dfs(int x){
-    visit[x] = true;
+    visited[x] = true;
     cout << x << ' ';
 
     for(int i = 0 ; i < graph[x].size(); i++){
         int y = graph[x][i];
-        if(!visit[y]) dfs(y);
+        if(!visited[y]) dfs(y);
     }
 
 }
@@ -22,7 +22,7 @@ void bfs(int start){
     queue<int> q;
 
     q.push(start);  
-    visit[start] = true;
+    visited[start] = true;
 
     while(!q.empty()){
         int x = q.front();  
@@ -30,9 +30,9 @@ void bfs(int start){
         cout << x << ' ';
 
         for(auto i : graph[x]){
-            if(!visit[i]){
+            if(!visited[i]){
                 q.push(i);
-                visit[i] = true;
+                visited[i] = true;
             }
         }
     }
