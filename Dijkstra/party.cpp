@@ -12,7 +12,7 @@ int result;
 void fc(int a, int d){
     memset(dst,INF,sizeof(dst));    // dst 를 INF 로 초기화, 사이즈 만큼 
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
-    // 최소 거리가 루트로?
+    // 최소 거리가 루트로
 
     pq.push({0,a}); // 현재 a 는 시작노드 
     dst[a] = 0; // 시작 지점의 거리 0 으로 
