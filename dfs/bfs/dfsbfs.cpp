@@ -39,8 +39,8 @@ void bfs(int start){
 }
 
 int main(){ 
-
     int n,m,v;
+
     cin >> n >> m >> v;
 
     for(int i = 0 ; i< m ; i++){
