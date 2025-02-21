@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
+// 2752 - 세수 정렬
 
 int main(){
     ios::sync_with_stdio(0), cin.tie(0);
