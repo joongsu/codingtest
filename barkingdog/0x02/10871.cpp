@@ -1,7 +1,6 @@
 #include <iostream>
 
 using namespace std;
-
 // 10871 - x보다 작은 수 
 int main(){
     ios::sync_with_stdio(0), cin.tie(0);
